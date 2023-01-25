@@ -1,0 +1,38 @@
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- so it looks good on a phone -->
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static '/css/signup.css' %}"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+    <title>{{h1}}</title>
+    <h1>{{h1}}</h1>
+<br>
+<body>
+  {% if form.errors %}
+  <p style = "color:red">
+    Please correct the error{{form.errors|pluralize}} below.
+    {{ form.not_field_errors }}
+  </p>
+  {% endif %}
+  {% block title %}{{Sign_Up}}{% endblock %}
+<div id="loginBox">
+  <div id ="innerStyle">
+  <h2>Sign Up for IntramuralsPro</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+      <br>
+    {% if messages %}
+        <ul class="messagelist">
+            {% for message in messages %}
+              <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+      <button type="submit" onclick="this.disabled=true,this.form.submit();">Sign Up</button>
+  </form>
+</div>
+</div>
+</body>

@@ -1,0 +1,77 @@
+[{ALLOW view Network,Programming,Editors,Server,Management}]
+
+
+%%text-success
+%%dropcaps
+Q %%lead __R Code__
+/%
+/%
+/%
+----
+[{InsertPage page=Messages section=3}]
+
+[{TableOfContents}]
+
+
+!!! Intro
+
+This project ...
+
+
+
+!!! Initialization
+
+Set up the groups:
+Referee with permissions:
+** ... decide if authenticated is good enough or if we want a group for customers?
+
+
+!!! To Do
+* send email to particular groups
+* Isaac runs a management job to archive seasons and reset payment, run as a crontab
+
+*Information per page
+**Home
+*- Next game date,time,location
+*- Team 1 and color, team 2 and color
+*- Team wins and losses
+*- Top teams with each team and their record
+
+**Team Info
+*- Team Name
+*- Season and sport
+*- record win/loss
+*- team members Name
+*- upcoming games date, w/l, opponent
+*- rules
+
+**Schedule
+*- current games
+
+* send out mass emails
+
+Future
+*automatic team captian for person who creates team
+
+###################################################
+* auto scheduler
+
+!!! Environment
+python -m pip install django
+python -m pip install django-money
+python -m pip install psycopg2-binary
+python -m pip install phonenumbers
+python -m pip install Pillow
+python -m pip install django_extensions
+
+!!! Model Graphing
+
+See ../graph_models.md
+
+!!! Server set up
+
+
+
+----
+[Server.JSPWiki], [Programming|Category.Programming]
+[Evolve 2022|Category.Evolve2022]

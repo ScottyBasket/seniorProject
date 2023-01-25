@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- so it looks good on a phone -->
+        <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/schedule.css' %}"/>
+        <title>Intramurals Pro</title>
+
+    </head>
+    <body>
+        {% csrf_token %}
+        {% include 'nav.html' %}
+
+        <main>
+            <h1>Current Games</h1>
+            <div id="upNextGrid">
+                {% for i in upcomingGames %}
+                <div class="container">
+                    <h3>{{i.team1.name}}  VS  {{i.team2.name}}</h3>
+                    <div class="containing">
+                    <p>Date: {{i.date}}</p>
+                    <p>Time: {{i.time}}</p>
+                    <p>Location: {{i.location}}</p>
+                    <p>Score: {{i.score1}}/{{i.score2}}
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </main>
+
+    </body>
+</html>

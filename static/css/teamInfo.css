@@ -1,0 +1,99 @@
+main{
+    width:80%;
+    margin: 6em auto 0 auto;
+    height:100vh;
+}
+
+h3{
+    color:white;
+    font-family:var(--font);
+    font-size:1em;
+}
+
+#topInfo{
+    width:100%;
+    border-radius:15px;
+    background-color: var(--sec-color);
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#leftInfo{
+    margin: 1em 1em 1em 1em;
+    padding: 1em 1em;
+    width:43.5%;
+}
+
+#leftInfo p{
+    padding:.25em;
+}
+
+#rightInfo{
+    margin: 1em 1em 1em 1em;
+    padding: 1em 1em;
+    width:43.5%;
+    text-align: center;
+}
+
+#teamMembers{
+    background-color: var(--third-color);
+    width:20%;
+    display:inline-block;
+    border-radius:15px;
+    margin-right:9%;
+    margin-top:2em;
+}
+
+.control{
+    margin:20px;
+}
+
+.control h2{
+    text-align: center;
+}
+
+#upcomingGames{
+    background-color: var(--third-color);
+    width:70%;
+    display:inline-block;
+    border-radius:15px;
+    margin-top:2em;
+}
+
+#rules{
+    background-color:var(--main-color);
+    width:100%;
+    margin:3em auto;
+    border-radius:15px;
+}
+
+#rules .control h2{
+    padding:1.5em 0;
+}
+
+#rules .control p{
+    padding:0 2em 1.5em 0;
+}
+
+.headerNames{
+    display:inline-block;
+}
+
+.headerNames h3{
+    float:left;
+    margin:1em 4vw;
+}
+
+.teamName::first-letter{
+    text-transform: capitalize;
+}
+table {
+    width: 100%;
+}
+
+th {
+    height: 70px;
+    color:var(--font-color);
+    font-family:var(--font);
+    text-align:left;
+}

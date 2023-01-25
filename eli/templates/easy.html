@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/css/easy.css' %}" rel="stylesheet" type="text/css">
+    <br><br><br>
+    <meta charset="UTF-8">
+    <title>{{browser_bar_title}}</title>
+</head>
+<body>
+{% if form.errors %}
+  <p style="color: red;">
+        Please correct the error{{ form.errors|pluralize }} below.
+        {{ form.non_field_errors }}
+  </p>
+{% endif %}
+
+<form method="post" action="" enctype="multipart/form-data">
+    {% if warning %}
+        <h3>{{ warning }}</h3>
+    {% endif %}
+    <table>
+        <h1>{{h1}}</h1>
+    {% csrf_token %}
+    {{message}}<br>
+    {{form}}
+    </table>
+    <br><br>
+    <input type="submit" name="Submit" value="Submit" class="button" id="submit"/>
+    <a href="{% url 'home' %}">
+        <button class="button" type="button">
+            Cancel
+        </button>
+    </a>
+</table>
+</form>
+</body>
+</html>
+{% endblock%}
+

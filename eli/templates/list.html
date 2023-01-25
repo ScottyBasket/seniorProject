@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/css/list.css' %}" rel="stylesheet" type="text/css">
+        <br><br><br>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        {% csrf_token %}
+        {% include 'nav.html' %}
+        <aside>
+            <div id = "options">
+                <div class = "options">
+                    <a href = {% url 'sportAdd' %}> Add Sport </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'sports' %}>Edit Sports </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'leagueAdd' %}> Add League </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'leagues' %}>Edit Leagues </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'locationAdd' %}> Add Location </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'locations' %}>Edit Locations </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'teamAdd' %}> Add Team </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'teams' %}>Edit Teams </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'gameAdd' %}> Add Game </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'games' %}>Edit Games </a>
+                </div>
+
+                {% if is_president %}
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="options">
+                <a href="{%url 'mail' %}">Email</a>
+                </div>
+            {% endif %}
+
+            </div>
+        </aside>
+        
+        <main>
+            <h1 id = "main_header">Edit</h1>
+            <div id="colored_box">
+                <div id = "editable" style="color: red;">
+                    <h1>{{h1}}</h1>
+                    <div id = "center_editable">
+                        {% for d in data %}
+                        {% if h1 == "List Leagues" %}
+                        <a href = {% url 'leagueEdit' d.id %}> Edit -</a>
+                        {% endif %}
+                
+                        {% if h1 == "List Locations" %}
+                        <a href = {% url 'locationEdit' d.id %}> Edit -</a>
+                        {% endif %}
+              
+                        {% if h1 == "List Sports" %}
+                        <a href = {% url 'sportEdit' d.id %}> Edit -</a>
+      
+                        {% endif %}
+                        {% if h1 == "List Teams" %}
+                        <a href = {% url 'teamEdit' d.id %}> Edit -</a>
+ 
+                        {% endif %}
+                        {% if h1 == "List Games" %}
+                        <a href = {% url 'gameEdit' d.id %}> Edit -</a>
+          
+                        <a href = {% url 'gameUpdateScore' d.id %}> Update </a>
+                        {% endif %}
+                        {% if h1 == "List Games" %}
+                        {{d}}<br>
+                        {% endif %}
+                        {{d.name}}<br>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </body>
+</html>
+

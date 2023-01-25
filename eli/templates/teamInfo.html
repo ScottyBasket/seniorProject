@@ -1,0 +1,98 @@
+{% load static %}
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- so it looks good on a phone -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/teamInfo.css' %}"/>
+    <title>Intramurals Pro</title>
+
+</head>
+<body>
+    {% csrf_token %}
+    {% include 'nav.html' %}
+
+    <main>
+        <div id ="topInfo">
+            <div id="leftInfo">
+                <h2 class="teamName">{{myTeam.name}}</h2>
+                <br>
+                <h3>{{myTeam.league.sport}} - {{myTeam.league.name}}</h3>
+            </div>
+            <div id = "rightInfo">
+                <h1>{{myTeam.wins}}/{{myTeam.losses}}</h1>
+                <br>
+                <p>wins/losses</p>
+            </div>
+        </div>
+
+        <div id = "teamMembers">
+            <div class="control">
+                <h2>Team Members</h2>
+                <table>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                    </tr>
+                    {% for l in teamMembers %}
+                        <tr>
+                            <th>
+                                {{l.name}}
+                                <hr>
+                            </th>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        </div>
+
+        <div id = "upcomingGames">
+            <div class="control">
+            <h2>Upcoming Games</h2>
+            <table>
+                <tr>
+                    <th>
+                        Date
+                    </th>
+                    <th>
+                        Opponent
+                    </th>
+                    <th>
+                        W/L 
+                    </th>
+                </tr>
+                {% for key,values in upcomingGames.items %}
+                {% comment %} {{key}}/{{values.1}} {% endcomment %}
+                <tr>
+                    <th>
+                        {{key.date}}
+                    </th>
+                    <th>
+                        {{values.0}}
+                    </th>
+                    <th>
+                        {{values.1}} /
+                        {{values.2}}
+                    </th>
+                </tr>
+                {% endfor %}
+
+
+
+            </table>
+        </div>
+        </div>
+
+        <div id = "rules">
+            <div class = "control">
+            <h2>Rules</h2>
+            <p>{{myTeam.league.sport.rules}}</p>
+            {% comment %} <p>{{test}}</p> {% endcomment %}
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

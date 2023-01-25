@@ -1,0 +1,213 @@
+*{
+    color:white;
+}
+
+body{
+    background-image: linear-gradient(45deg, #121212, #454545,#323232);
+    height:100%;
+}
+
+aside{
+    height:100vh;
+    width:150px;
+    background-color: var(--third-color);
+    position:fixed;
+}
+
+#options{
+    padding-top:55px;
+}
+
+.options{
+    margin: 1.5em 0 1.5em 1em;
+}
+
+a:hover{
+    color:var(--bg);
+}
+
+main{
+    width:90%;
+    height:100vh;
+    float:right;
+    z-index:-1;
+    margin-bottom:2em;
+}
+
+h1{
+    margin:80px;
+    margin-left: auto;
+    margin-right: auto;
+    width:15%;
+}
+
+.sections{
+    width:85%;
+    margin:auto;
+    border-radius: 45px;
+    background-color: var(--sec-color);
+}
+
+.sections{
+    margin-bottom:4em;
+}
+
+#section1{
+    width:85%;
+    margin:auto;
+    border-radius: 45px;
+    background-color: var(--sec-color);
+}
+
+table{
+    margin: 1em auto;
+}
+
+#inputs{
+    margin: 1em auto;
+    width: fit-content;
+    margin-top:0;
+    padding-bottom:2em;
+    color:white;
+}
+
+#inputs_wrap{
+    width:100%;
+}
+
+.button{
+    all:revert;
+    background-color:var(--main-color);
+    border-radius:45px;
+    margin:1em 2em;
+    padding:1em 2em;
+    border:none;
+    color:var(--font-color);
+}
+
+.button:hover{
+    color:var(--font-color);
+    background-color: var(--third-color);
+    cursor:pointer;
+}
+
+#inputs a:hover{
+    color:var(--font-color);
+}
+
+a{
+    color:var(--font-color);
+    text-decoration:none;
+}
+
+input{
+    border-radius: 15px;
+   border:solid 1px var(--second-white);
+    margin: 1em 0;
+    padding:.75em .5em;
+    width:95%;
+    background-color: var(--third-color);    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea{
+    border-radius:15px;
+    resize:none;
+    padding: 1em;
+    background-color: var(--third-color);
+    border:solid 1px var(--second-white);
+}
+
+.options a{
+    text-decoration: none;
+    color:var(--font-color);
+    font-family: 'Inter'
+}
+
+h1{
+    all:revert;
+    margin:0 auto;
+    padding-top:1em;
+    width:fit-content;
+    color:var(--font-color);
+    font-family: 'Inter';
+}
+
+form{
+    margin: 2.5em auto;
+}
+
+#main_header{
+    all:revert;
+    margin: 2.5em auto 0 auto;
+    width:fit-content;
+    color:var(--font-color);
+    font-family: var(--font);
+}
+
+#id_gender,
+#id_sport,
+#id_start_date_month,
+#id_start_date_day,
+#id_start_date_year,
+#id_end_date_month,
+#id_end_date_day,
+#id_end_date_year,
+#id_last_signup_date_month,
+#id_last_signup_date_day,
+#id_last_signup_date_year,
+#id_valid_locations,
+#id_league,
+#id_location,
+#id_date_month,
+#id_date_day,
+#id_date_year,
+#id_team1,
+#id_team2,
+#id_time,
+#id_score2,
+#id_score1,
+#id_other_locations,
+#id_teams,
+#id_subject,
+#id_group,
+#id_message{
+    background-color: var(--third-color);
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin:.5em .25em;
+    border:solid 1px var(--second-white);
+    border-radius: 15px;
+}
+
+select {
+    appearance: none;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.helptext{
+    color:white;
+}
+
+td{
+    color:white;
+}
+
+#id_other_locations div{
+    display:inline-block;
+    margin:auto;
+}
+
+#id_other_locations{
+    display:block;
+}

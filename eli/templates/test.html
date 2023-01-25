@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
+    <br><br><br>
+    <meta charset="UTF-8">
+    <title>{{browser_bar_title}}</title>
+    <h1>{{h1}}</h1>
+</head>
+<body>
+    <h1 style="color:red;">dog</h1>
+    <div class="right_area" style="color:white;width:40%;margin-left:auto;margin-right:auto;margin-top:30%;">
+        <div id="addstuff">
+            <a href = {% url 'sportAdd' %}> Add Sport </a>
+            <br>
+            <a href = {% url 'sports' %}> Sports </a>
+            <br>
+            <a href = {% url 'leagueAdd' %}> Add League </a>
+            <br>
+            <a href = {% url 'leagues' %}> Leagues </a>
+            <br>
+            <a href = {% url 'locationAdd' %}> Add Location </a>
+            <br>
+            <a href = {% url 'locations' %}> Locations </a>
+            <br>
+            <a href = {% url 'teamAdd' %}> Add Team </a>
+            <br>
+            <a href = {% url 'teams' %}> Teams </a>
+            <br>
+            <a href = {% url 'joinTeam' %}> Join Team </a>
+            <br>
+            <a href = {% url 'gameAdd' %}> Add Game </a>
+            <br>
+            <a href = {% url 'games' %}> Games </a>
+            <br>
+            --{{testData}}--
+        </div>
+    </div>
+</body>
+</html>
+

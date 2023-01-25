@@ -1,0 +1,204 @@
+body{
+    background-image: linear-gradient(45deg, #121212, #454545,#323232);
+}
+
+.right_area{
+    margin-left:20%;
+    float:right;
+}
+
+#buttons{
+    width:40%;
+    height:50%;
+    margin-top:10%;
+    margin-left:20%;
+    background-color:white;
+}
+
+button a{
+    color:var(--font-color);
+    text-decoration: none;
+    background-color: transparent;
+    /* padding: 5% 33%; */
+}
+
+button{
+    text-decoration:none;
+    border-bottom:none;
+}
+
+#teamAdd button{
+    text-decoration: none;
+}
+
+main{
+    width:80%;
+    margin: 6em auto 0 auto;
+    height:100vh;
+}
+
+#topInfo{
+    width:100%;
+    border-radius:15px;
+    background-color: var(--sec-color);
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#leftInfo{
+    margin: 1em 1em 1em 1em;
+    padding: 1.5em 1em;
+    width:43.5%;
+}
+
+#leftInfo p{
+    padding:.25em;
+}
+
+#rightInfo{
+    margin: 1em 1em 1em 1em;
+    padding: 1em 1em;
+    width:43.5%;
+    display:inline;
+}
+
+#teamInfoDiv{
+    width: 40%;
+    background-color: var(--third-color);
+    border-radius:15px;
+    margin:2em 0;
+    padding-right:-50%;
+}
+
+#teamInfo{
+    padding:1em;
+    display:flex;
+}
+
+#leftTeam{
+    width:40%;
+    display:inline;
+    margin:1em;
+}
+
+#rightTeam{
+    width:40%;
+    display:inline;
+    margin:auto;
+}
+
+#rightTeam p{
+    margin-top:.5em;
+}
+
+#teamN{
+    margin-top:.5em;
+}
+
+#teamN:first-letter{
+    text-transform:capitalize;
+}
+
+h3{
+    font-family:var(--font);
+    color:var(--font-color);
+}
+
+#topTeams{
+    background-color: var(--third-color);
+    width: 50%;
+    border-radius:15px;
+    margin: 2em 0;
+    margin-top:-6em;
+    overflow:auto;
+    float:right;
+}
+
+#topTeamsDiv h2{
+    width:fit-content;
+    margin: 0 auto;
+}
+
+#topTeamsDiv{
+    width:90%;
+    margin: 2em auto;
+}
+
+#topTeamsList a, #topTeamsList p{
+    display:inline;
+}
+
+#topTeamsList p{
+    float:right;
+}
+
+#topTeamsList{
+    margin-top:1em;
+}
+
+#topTeamsList a{
+    color:var(--font-color);
+    text-decoration: none;
+    font-family:var(--font);
+}
+
+#teamAssign{
+    width:40%;
+}
+
+#teamAssign h2{
+    margin:1.5em auto 1.5em auto;
+    width:fit-content;
+}
+
+#teamAssign button{
+    display:block;
+    width:100%;
+    margin:1.5em 0;
+    background-color: var(--main-color);
+    padding: 1.5em auto;
+    font-size: 1em;
+}
+
+#teamAssign button:hover{
+    background-color: var(--main-color2);
+}
+
+#yourTeam{
+    display:block;
+}
+
+#yourTeam,#otherTeam, #rightInfo h2{
+    float:left;
+    padding:.51em;
+}
+
+#yourTeam h2, #otherTeam h2{
+    margin-right:.5em;
+}
+
+#yourTeam h2::first-letter{
+    text-transform: capitalize;
+}
+
+#yourTeam img, #otherTeam img{
+    width:10%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 70px;
+    color:var(--font-color);
+    font-family:var(--font);
+}
+
+th{
+    padding-right:15%;
+}
+
+#error{
+    margin: 2em auto;
+}

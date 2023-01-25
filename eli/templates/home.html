@@ -1,0 +1,106 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- so it looks good on a phone -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}"/>
+    <title>Intramurals Pro</title>
+
+</head>
+<body>
+    {% csrf_token %}
+    {% include 'nav.html' %}
+
+    <main>
+        <div id ="topInfo">
+            {% if teamNames == None %}
+            <div id="error">
+                <h1>Join a team to start your adventure</h1>
+            </div>
+            {% else %}
+            <div id="leftInfo">
+                <h2>Next Game:</h2>
+                <br>
+                <p>Date: {{nextGame.date}}</p>
+                <p>Time: {{nextGame.time}}</p>
+                <p>Location: {{nextGame.location}}</p>
+            </div>
+            <div id = "rightInfo">
+                <div id="yourTeam">
+                    <h2>{{nextGame.team1.name}}</h2> 
+                    {% if nextGame.color1 == "white" %}
+                        <img src = "../../../static/img/whiteShirt.png">
+                    {% elif nextGame.color1 == "black" %}
+                        <img src="{% static 'img/blackShirt.png' %}">
+                    {% endif %}
+                </div>
+                <h2>VS</h2>
+                <div id="otherTeam">
+                    <h2>{{nextGame.team2.name}}</h2>
+                    {% if nextGame.color2 == "white" %}
+                        <img src = "../../../static/img/whiteShirt.png">
+                    {% elif nextGame.color2 == "black" %}
+                        <img src="{% static 'img/blackShirt.png' %}">
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <div id="teamInfoDiv">
+            <div id="teamInfo">
+                <div id="leftTeam">
+                    <h3>Your Team:</h3>
+                    <h3 id="teamN">
+                        {{myTeam.name}}
+                    </h3>
+                </div>
+                <div id = "rightTeam">
+                    <p> Wins: {{myTeam.wins}}</p>
+                    <p> Losses: {{myTeam.losses}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="topTeams">
+            <div id="topTeamsDiv">
+                <h2>Top Teams</h2>
+                <table>
+                    <tr>
+                        <th>
+                            Team Name
+                        </th>
+                        <th>
+                            W/L
+                        </th>
+                    </tr>
+                    {% for t in topTeams %}
+                    
+                    <tr>
+                        <th>
+                            {{t.name}}
+                        </th>
+                        <th>
+                            {{t.wins}} / {{t.losses}}
+                        </th>
+                    </tr>
+                    {% endfor %}
+              
+                </table>
+            </div>
+
+
+        </div>
+
+        <div id="teamAssign">
+            <div id="teamAssignCenter">
+                <h2>Signup For{{league}}{{sport}}</h2>
+                <a href = 'joinTeam'><button>Join Team +</button></a>
+                <a href='teamAdd'><button>Create Team +</button></a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+

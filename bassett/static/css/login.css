@@ -1,0 +1,74 @@
+h1{
+    color:var(--font-color);
+    font-size:2.5em;
+    padding-top:2vw;
+}
+
+#loginBox{
+    overflow:auto;
+    height:80%;
+    background-color: var(--third-color);
+    width:50%;
+    margin: 4vh auto 0 auto;
+    border-radius:45px;
+}
+
+input,
+textarea {
+    box-shadow: 0;
+    border: 0;
+    border-bottom: 1px #b5b5b5 solid;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    padding-left: 0px;
+    color: #C6C6C6;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    background: none;
+}
+
+textarea,
+input::placeholder {
+    color: #7C7E86;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+}
+
+label{
+    float:left;
+}
+
+button{
+    font-size:1em;
+}
+
+.center{
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
+    height:fit-content;
+    text-align: center;
+    margin-top:15vh;
+}
+
+button a{
+    color:var(--font-color);
+    text-decoration: none;
+}
+
+@media screen and (max-height:600px){
+    button{
+        font-size:1em;
+        margin:.5em;
+        padding:1em;
+        width:40%;
+        display:inline;
+        float:left;
+    }
+
+    #registerbutton{
+        margin:.5em;
+    }
+}

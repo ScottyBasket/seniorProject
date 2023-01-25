@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/> 
+    <link rel="stylesheet" type="text/css" href="{% static '/css/nav.css' %}"/>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="{% url 'home'%}">
+                        Home
+                    </a>
+                </li>
+                <li><a href="{% url 'teamInfo' %}">
+                        Team Info</a>
+                </li>
+                <li><a href="{% url 'schedule' %}">
+                    Schedule</a>
+                </li>
+                {% if is_president %}
+                <li><a href="{% url 'sportAdd' %}" style="color:rgb(179, 0, 0);">
+                    Adding/Editing</a>
+                </li>
+                {% endif %}
+                <li id = "logout"><a href="{% url 'logout' %}?next=/">Logout</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+        <div id="name">
+            <div class="dropdown">
+                <span id="cap">{{user_name}}</span>
+                <div class="dropdown-content">
+                    <a href="{% url 'password' %}?next=/">Change Password</a>
+                    {% if is_president %}
+                    <br>
+                    <a href="{%url 'mail' %}">Email</a>
+                    <br>
+                    {% endif %}
+                    <a href="{% url 'logout' %}?next=/">Logout</a>
+                </div>
+            </div>
+        <div>
+
+    </nav>
+</header>
+</body>
+</html>

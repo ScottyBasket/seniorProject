@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+}
+
+:root{
+    --bg: #121212;
+    --font: 'Inter';
+    --font-color:#F5F5F5;
+    --second-white:#a4a4a4c8;
+    --main-color:#272F59;
+    --main-color2:#272f59b6;
+    --sec-color:#545559;
+    --third-color:#5B6EA6;
+}
+
+#name > div:nth-child(1) > div{
+    text-transform: lowercase;
+    color:red
+}
+
+body{
+    background-color: var(--bg);
+}
+
+p, h1, h2, label,center{
+    color:var(--font-color);
+    font-family:'Inter';
+}
+
+#welcome{
+    margin: auto;
+    width:20%;
+    height:auto;
+}
+
+.center h2{
+    margin: 1em 0 .25em 0;
+    font-size: 1.5em;
+}
+
+.center p{
+    margin:.75em;
+    font-family: 'Inter';
+}
+
+button{
+    padding:1em 5em;
+    border-radius:15px;
+    background-color: var(--sec-color);
+    border:none;
+    color:var(--font-color);
+    margin-top:1em;
+}
+
+button:hover{
+    background-color: #18203E;
+    cursor:pointer;
+}
+
+#registerButton{
+    padding: 1em 1em;
+    margin-top:2.5em;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    color: var(--bg);
+    -webkit-text-fill-color: none;
+    border:none;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--bg);
+}
+
+#top_name{
+    font-family: 'Inter';
+    height:auto;
+}
+
+header{
+    background:var(--main-color);
+    text-align: center;
+    position:fixed;
+    z-index: 5;
+    width:100%;
+}
+

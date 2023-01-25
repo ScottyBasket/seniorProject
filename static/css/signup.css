@@ -1,0 +1,135 @@
+*{
+    color:var(--font-color);
+}
+
+h1{
+    color:var(--font-color);
+    font-size:2.5em;
+    padding-top:2vw;
+}
+
+#loginBox{
+    overflow:auto;
+    height:80%;
+    background-color: var(--third-color);
+    width:50%;
+    margin: 4vh auto 0 auto;
+    border-radius:45px;
+}
+
+input,
+textarea {
+    box-shadow: 0;
+    border: 0;
+    border-bottom: 1px #b5b5b5 solid;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    padding-left: 0px;
+    color: #C6C6C6;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    background: none;
+}
+
+textarea,
+input::placeholder {
+    color: #7C7E86;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+}
+
+label{
+    float:left;
+}
+
+button{
+    font-size:1em;
+}
+
+.center{
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
+    height:fit-content;
+    text-align: center;
+    margin-top:15vh;
+}
+
+
+button{
+    background-color:var(--main-color);
+}
+
+button a{
+    color:var(--font-color);
+    text-decoration: none;
+}
+
+#innerStyle{
+    margin:2em;
+}
+
+p{
+    margin-top:1em;
+}
+
+form ul li{
+    margin:1em;
+    color:rgb(153, 0, 0);
+}
+
+
+select {
+    appearance: none;
+    cursor: pointer;
+    border-radius: 15px;
+    height:2em;
+    width:8em;
+    padding:0 2em;
+}
+
+#id_gender{
+    margin:0 1em;
+    width:fit-content;
+    color:#7C7E86;
+}
+
+select option{
+    color:black;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    background-color: transparent;
+  -webkit-text-fill-color: white;
+  box-shadow:  0 0 0px 1000px transparent inset;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  border-bottom: 1px #b5b5b5 solid;
+}
+
+
+
+@media screen and (max-height:600px){
+    button{
+        font-size:1em;
+        margin:.5em;
+        padding:1em;
+        width:40%;
+        display:inline;
+        float:left;
+    }
+
+    #registerbutton{
+        margin:.5em;
+    }
+}

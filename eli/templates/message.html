@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/css/easy.css' %}" rel="stylesheet" type="text/css">
+    <br><br><br>
+    <meta charset="UTF-8">
+    <title>{{browser_bar_title}}</title>
+    <h1>{{h1}}</h1>
+</head>
+<body>
+
+
+<form method="post" action="" enctype="multipart/form-data">
+    <h3> {{message}} </h3>
+    {% csrf_token %}
+    <br><br>
+    <a href="{% url 'home' %}">
+        {{ link_text }}
+    </a>
+</form>
+</body>
+</html>
+{% endblock%}
+

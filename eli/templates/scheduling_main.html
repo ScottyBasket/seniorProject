@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% include static %}
+<html lang='en'>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/scheduling.css' %}"/>
+</head>
+<body>
+    <aside>
+            <div id = "options">
+                <div class = "options">
+                    <a href = {% url 'sportAdd' %}> Add Sport </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'sports' %}> Sports </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'leagueAdd' %}> Add League </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'leagues' %}> Leagues </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'locationAdd' %}> Add Location </a>
+                </div>
+
+                <div class = "options">
+                    <a href = {% url 'locations' %}> Locations </a>
+                </div>
+
+            </div>
+        </aside>
+</body>
+</html>
